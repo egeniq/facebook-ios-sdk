@@ -278,6 +278,14 @@ static NSString* kSDKVersion = @"2";
   [self authorizeWithFBAppAuth:YES safariAuth:YES];
 }
 
+// Custom method by egeniq. Same flow as authroize. but allow authorizeWithFBAppAuth and safariAuth to be customised
+
+- (void)authorize:(NSArray *)permissions authorizeWithFBAppAuth:(BOOL)authorizeWithFBAppAuth safariAuth:(BOOL)safariAuth {
+    self.permissions = permissions;
+    
+    [self authorizeWithFBAppAuth:authorizeWithFBAppAuth safariAuth:safariAuth];
+}
+
 /**
  * This function processes the URL the Facebook application or Safari used to
  * open your application during a single sign-on flow.
