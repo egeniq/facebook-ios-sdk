@@ -51,6 +51,9 @@
 
 - (void)authorize:(NSArray *)permissions;
 
+// Custom egeniq method
+- (void)authorize:(NSArray *)permissions authorizeWithFBAppAuth:(BOOL)authorizeWithFBAppAuth safariAuth:(BOOL)safariAuth;
+
 - (BOOL)handleOpenURL:(NSURL *)url;
 
 - (void)logout:(id<FBSessionDelegate>)delegate;
