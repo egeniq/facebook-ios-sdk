@@ -71,9 +71,6 @@
 
 - (void)authorize:(NSArray *)permissions;
 
-// Custom egeniq method
-- (void)authorize:(NSArray *)permissions authorizeWithFBAppAuth:(BOOL)authorizeWithFBAppAuth safariAuth:(BOOL)safariAuth;
-
 - (void)extendAccessToken;
 
 - (void)extendAccessTokenIfNeeded;
